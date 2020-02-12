@@ -5,38 +5,45 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <div class="navbar">
-        <a class="navbar-logo">
-          <img src="img/logo-technomart.svg" width="109" height="19" alt="Интернет-магазин «Техномарт»">
-        </a>
-        <ul class="navbar__list">
-          <li class="navbar__item">
-            <a class="navbar__link navbar__link--search" href="#">Поиск</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link navbar__link--fav" href="#">Закладки: 0</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link navbar__link--basket" href="#">Корзина: 0</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link navbar__link--payment" href="#">Оформить заказ</a>
-          </li>
-        </ul>
+        <div class="container">
+          <a class="navbar-logo">
+            <img src="img/logo-technomart.svg" width="109" height="19" alt="Интернет-магазин «Техномарт»">
+          </a>
+          <form class="navbar-form">
+            <input class="navbar-search" type="search" placeholder="Поиск:">
+          </form>
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a class="navbar__link navbar__link--fav" href="#">Закладки: 0</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link navbar__link--basket" href="#">Корзина: 0</a>
+            </li>
+           <li class="navbar__item">
+              <a class="navbar__link navbar__link--payment" href="#">Оформить заказ</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="menu">
-        <p class="menu-text">
-          Интернет-магазин строительных материалов и инструментов для ремонта
-        </p>
-        <div class="menu-contact">
-          <p class="menu-contact__tel">+7 (812) 555-05-55</p>
-          <p class="menu-contact__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <div class="container">
+          <p class="menu-text">
+            Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта
+          </p>
+          <div class="menu-contact">
+            <p class="menu-contact__tel">+7 (812) 555-05-55</p>
+            <p class="menu-contact__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          </div>
+          <div class="menu-button">
+            <a class="menu-button__login button" href="#">Войти</a>
+            <a class="menu-button__reg button" href="#">Регистрация</a>
+          </div>
         </div>
-        <a class="menu-button menu-button__login button" href="#">Войти</a>
-        <a class="menu-button menu-button__reg button" href="#">Регистрация</a>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
@@ -66,8 +73,23 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">«Техномарт» — интернет-магазин строительных материалов и инструментов для ремонта</h1>
-      <section class="slider">
+      <section class="slider container">
         <h2 class="visually-hidden">Предложения</h2>
+        <div class="slider__items feature feature__top">
+          <div class="feature__item feature__item--materials">
+            <h3>Материалы</h3>
+            <div class="feature__flag flag">новинка</div>
+            <a class="feature__button button" href="#">На любой вкус</a>
+          </div>
+          <div class="feature__item feature__item--tool">
+            <h3>Инструмент</h3>
+            <a class="feature__button button" href="#">На все случаи</a>
+          </div>
+          <div class="feature__item feature__item--equipment">
+            <h3>Техника</h3>
+            <a class="feature__button button" href="#">Для стройки</a>
+          </div>
+        </div>
         <div class="slider__wrap">
           <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
           <input class="visually-hidden" type="radio" id="product-2" name="toggle">
@@ -76,54 +98,36 @@
             <label class="slider-controls__item slider-controls__item--2" for="product-2">Второй</label>
           </div>
           <ul class="slider__list">
-            <li class="slider__item">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <a class="slider__item-button button" href="catalog.html">Открыть каталог</a>
-            </li>
-            <li class="slider__item">
+            <li class="slider__item slider__item--1" id="slide1">
               <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
               <a class="slider__item-button button" href="catalog.html">Открыть каталог</a>
             </li>
+            <li class="slider__item slider__item--2" id="slide2">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+              <a class="slider__item-button button" href="catalog.html">Открыть каталог</a>
+            </li>
           </ul>
-        </div>
-      </section>
-      <section class="features">
-        <h2 class="visually-hidden">Услуги</h2>
-        <div class="features__wrap">
-          <ul class="features__list">
-            <li class="feature__item">
-              <h3>Материалы</h3>
-              <a class="feature__button button" href="#">На любой вкус</a>
-            </li>
-            <li class="feature__item">
-              <h3>Инструмент</h3>
-              <a class="feature__button button" href="#">На все случаи</a>
-            <li class="feature__item">
-              <h3>Техника</h3>
-              <a class="feature__button button" href="#">Для стройки</a>
-            </li>
-            <li class="feature__item">
+          <div class="slider__items feature feature__aside">
+            <div class="feature__item feature__item--discount">
               <h3>Скидка 50%</h3>
               <a class="feature__button button" href="#">На 350 товаров</a>
-            </li>
-            <li class="feature__item">
+            </div>
+            <div class="feature__item feature__item--delivery">
               <h3>Доставка</h3>
               <a class="feature__button button" href="#">Бесплатно</a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="catalog">
-        <h2 class="catalog__title title">Популярные товары:</h2>
-        <a class="catalog__button button" href="#">Все популярные товары</a>
+      <section class="catalog container">
+        <div class="catalog__goods">
+          <h2 class="catalog__title title">Популярные товары:</h2>
+          <a class="catalog__button button" href="#">Все популярные товары</a>
+        </div>
         <div class="catalog__list">
           <div class="catalog__item">
-            <div class="catalog__buttons">
-              <a href="#" class="catalog__button-buy button">Купить</a>
-              <a href="#" class="catalog__button-mark button">В закладки</a>
-            </div>
             <div class="catalog__img">
               <img src="img/Perforator_1.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 9000">
             </div>
@@ -132,10 +136,6 @@
             <div class="catalog__item-price">25500 Р.</div>
           </div>
           <div class="catalog__item">
-            <div class="catalog__buttons">
-              <a href="#" class="catalog__button-buy button">Купить</a>
-              <a href="#" class="catalog__button-mark button">В закладки</a>
-            </div>
             <div class="catalog__img">
               <img src="img/Perforator_2.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000">
             </div>
@@ -144,10 +144,6 @@
             <div class="catalog__item-price">15500 Р.</div>
           </div>
           <div class="catalog__item">
-            <div class="catalog__buttons">
-              <a href="#" class="catalog__button-buy button">Купить</a>
-              <a href="#" class="catalog__button-mark button">В закладки</a>
-            </div>
             <div class="catalog__img">
               <img src="img/Perforator_3.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000">
             </div>
@@ -157,10 +153,6 @@
           </div>
           <div class="catalog__item">
             <div class="catalog__flag flag">новинка</div>
-            <div class="catalog__buttons">
-              <a href="#" class="catalog__button-buy button">Купить</a>
-              <a href="#" class="catalog__button-mark button">В закладки</a>
-            </div>
             <div class="catalog__img">
               <img src="img/Perforator_4.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000">
             </div>
@@ -170,9 +162,11 @@
           </div>
         </div>
       </section>
-      <section class="brand">
-        <h2 class="brand__title title">Популярные производители:</h2>
-        <a class="brand__button button" href="#">Все производители</a>
+      <section class="brand container">
+        <div class="brand__popular">
+          <h2 class="brand__title title">Популярные производители:</h2>
+          <a class="brand__button button" href="#">Все производители</a>
+        </div>
           <div class="brand__list">
             <div class="brand__item">
               <a href="#"><img src="img/bosch.jpg" width="126" height="37" alt="BOSCH"></a>
